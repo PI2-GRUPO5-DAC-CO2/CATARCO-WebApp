@@ -30,20 +30,7 @@ npm install
 npm start
 ```
 
-A aplicação estará disponível em `http://localhost:3000`.
+A aplicação estará disponível em `localhost:3000`.
 
-## Ambientes
-<!--
-### Homologação
-
-`https://catarco-homol.netlify.com/`
---!>
-### Produção
-
-`catarco.netlify.com/`
-
-<!--
-## Licença
-
-GPLv3 © FoodCare. Acesse a [licença](LICENSE) para mais detalhes.
---!>
+## Acesse o ambiente de produção
+`catarco.netlify.com`
