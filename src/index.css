@@ -1,8 +1,96 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: #fbfbfb;
+  font: 400 1em "Roboto", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
+  background-color: #fafafa;
+}
+
+/* Pages */
+
+.bg-login {
+  background-color: #6d9ddd;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 85%;
+  }
+}
+
+/* Header */
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2e3f66;
+  flex-direction: row;
+  height: 60px;
+  padding: 0;
+}
+
+.header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  color: #fff;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.header-brand:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navbar */
+
+.navbar {
+  height: 50px;
+  color: #333;
+  background-color: #fbfbfb;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  color: #b0b0b0;
+  font-size: 1.125em;
+  font-weight: 400;
+  padding: 0.5rem 1.8rem 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: #49629a;
+}
+
+.nav-link-active {
+  color: #2e3f66;
 }

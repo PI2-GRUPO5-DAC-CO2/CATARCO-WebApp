@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
-export default function Dashboard() {
+export default function Registros() {
   return (
     <>
-      <Navbar page="dashboard"/>
+      <Navbar page="registros"/>
       <div className="container py-4">
-        <h1>Dashboard</h1>
+        <h1>Registros</h1>
       </div>
     </>
   );
