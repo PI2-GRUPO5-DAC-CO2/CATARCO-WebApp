@@ -97,34 +97,34 @@ body {
 
 /* Text */
 
+b,
+strong {
+  font-weight: 700;
+}
+
 h1 {
   color: #2e3f66;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-width: 500;
 }
 
 h2 {
   color: #2e3f66;
-  font-size: 1rem;
+  font-size: 25rem;
   font-width: 500;
 }
 
-@media (min-width: 768px) {
-  h1 {
-    font-size: 1.375rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
+.lead {
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 /* Dashboard */
 
 .dash-sensor-icon {
-  height: 1.125rem;
+  height: 1.25rem;
   width: auto;
-  margin: 0.2rem;
+  margin: 0.25rem;
 }
 
 .dash-sensor-data {
@@ -145,6 +145,64 @@ h2 {
 
 .card {
   border: none;
-  padding: 0.5rem 0.2rem;
+  padding: 0.6rem 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Buttons */
+
+.btn {
+  border: none;
+  font-weight: 500;
+  font-size: 1.125rem;
+  padding: 0.5rem 2.5rem;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #3688fc;
+}
+
+.btn-danger {
+  background-color: #f35050;
+}
+
+/* Table */
+.table {
+  font-size: 1rem;
+}
+.table thead th {
+  font-weight: 500;
+}
+.table th {
+  border-top: none;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .card {
+    padding: .4rem
+  }
+
+  .card-table {
+    padding: 0 !important;
+  }
 }

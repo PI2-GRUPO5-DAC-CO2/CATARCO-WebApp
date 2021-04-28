@@ -12,88 +12,48 @@ export default function Dashboard() {
           <h1>Estado do Sistema: Ativo</h1>
         </div>
         <div className="mb-2 form-row">
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
+          <div className="col-6 col-md-3 d-flex">
+            <div className="card d-flex align-items-center mb-2 text-center w-100">
+              <div className="d-flex flex-row mt-1">
+                <FiActivity className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data mb-2">43 ppm</p>
+              </div>
+              <p className="dash-sensor-name mb-1 flex-grow-1">
+                CO2 no Ambiente
+              </p>
             </div>
           </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
+          <div className="col-6 col-md-3 d-flex">
+            <div className="card d-flex align-items-center mb-2 text-center w-100">
+              <div className="d-flex flex-row justify-content-between mt-1">
+                <FiActivity className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data mb-2">92%</p>
+              </div>
+              <p className="dash-sensor-name mb-1 flex-grow-1">
+                Eficiência do Contator
+              </p>
             </div>
           </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
+          <div className="col-6 col-md-3 d-flex">
+            <div className="card d-flex align-items-center mb-2 text-center w-100">
+              <div className="d-flex flex-row justify-content-between mt-1">
+                <FiActivity className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data mb-2">86%</p>
+              </div>
+              <p className="dash-sensor-name mb-1 flex-grow-1">
+                Eficiencia do Reator
+              </p>
             </div>
           </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div className="card d-flex align-items-center mb-2">
-              <FiActivity className="dash-sensor-icon mb-2"/>
-              <p className="dash-sensor-data mb-1">43ºC</p>
-              <p className="dash-sensor-name mb-1">Temperatura do Reator</p>
+          <div className="col-6 col-md-3 d-flex">
+            <div className="card d-flex align-items-center mb-2 text-center w-100">
+            <div className="d-flex flex-row justify-content-between mt-1">
+                <FiActivity className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data mb-2">??</p>
+              </div>
+              <p className="dash-sensor-name mb-1 flex-grow-1">
+                Concentração de CO2 Final
+              </p>
             </div>
           </div>
         </div>
