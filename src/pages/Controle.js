@@ -33,8 +33,8 @@ export default function Controle() {
                   <tr>
                     <th>Controlador</th>
                     <th className="w-25">Local</th>
-                    <th className="w-15">Status</th>
-                    <th className="w-15">Ativar/Desativar</th>
+                    <th className="w-20">Status</th>
+                    <th className="w-15">Controle</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -144,8 +144,8 @@ export default function Controle() {
                   <tr>
                     <th>Controlador</th>
                     <th className="w-25">Local</th>
+                    <th className="w-20">Valor</th>
                     <th className="w-15">Status</th>
-                    <th className="w-15">Ativar/Desativar</th>
                   </tr>
                 </thead>
                 <tbody>

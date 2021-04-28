@@ -32,5 +32,5 @@ npm start
 
 A aplicação estará disponível em `localhost:3000`.
 
-## Acesse o ambiente de produção
-`catarco.netlify.com`
+## Ambiente de produção
+[`catarco.netlify.com`](catarco.netlify.com)

@@ -183,6 +183,9 @@ h2 {
 .w-15 {
   width: 15% !important;
 }
+.w-20 {
+  width: 20% !important;
+}
 
 @media (max-width: 767px) {
   h1 {
@@ -198,10 +201,23 @@ h2 {
   }
 
   .card {
-    padding: .4rem
+    padding: 0.4rem;
   }
 
   .card-table {
     padding: 0 !important;
+  }
+
+  .dash-sensor-icon {
+    height: 1rem;
+    width: auto;
+  }
+
+  .dash-sensor-data {
+    font-size: 1.375rem;
+  }
+
+  .dash-sensor-name {
+    font-size: 0.75rem;
   }
 }
