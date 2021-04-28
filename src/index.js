@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorkerRegistration from './services/service-worker-registration';
+import * as serviceWorkerRegistration from './services/serviceWorkerRegistration';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
