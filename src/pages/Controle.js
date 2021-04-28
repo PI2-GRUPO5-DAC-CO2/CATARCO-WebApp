@@ -13,13 +13,18 @@ export default function Controle() {
               Atualmente o sistema está <b>ativo</b>.
             </p>
           </div>
-          <div>
-            <button className="btn btn-primary mb-2 mr-2" onClick={() => null}>
+          <div className="form-row">
+            <div className="col-12 col-sm-auto">
+            <button className="btn btn-primary btn-block mb-2 mr-2" onClick={() => null}>
               Pausar sistema
             </button>
-            <button className="btn btn-danger mb-2 mr-2" onClick={() => null}>
+            </div>
+            <div className="col-12 col-sm-auto">
+            <button className="btn btn-danger btn-block mb-2 mr-2" onClick={() => null}>
               Desligar sistema
             </button>
+            </div>
+            
           </div>
         </div>
         <div className="mb-4" id="controllers">
