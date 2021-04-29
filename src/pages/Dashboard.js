@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { FiActivity } from "react-icons/fi";
+import { FiCloud, FiTrendingUp, FiFilter } from "react-icons/fi";
 
 export default function Dashboard() {
   return (
@@ -15,8 +15,8 @@ export default function Dashboard() {
           <div className="col-6 col-md-3 d-flex">
             <div className="card d-flex align-items-center mb-2 text-center w-100">
               <div className="d-flex flex-row mt-1">
-                <FiActivity className="dash-sensor-icon mr-2" />
-                <p className="dash-sensor-data mb-2">43 ppm</p>
+                <FiCloud className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data ml-1 mb-2">43 ppm</p>
               </div>
               <p className="dash-sensor-name mb-1 flex-grow-1">
                 CO2 no Ambiente
@@ -26,8 +26,8 @@ export default function Dashboard() {
           <div className="col-6 col-md-3 d-flex">
             <div className="card d-flex align-items-center mb-2 text-center w-100">
               <div className="d-flex flex-row justify-content-between mt-1">
-                <FiActivity className="dash-sensor-icon mr-2" />
-                <p className="dash-sensor-data mb-2">92%</p>
+                <FiTrendingUp className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data ml-1 mb-2">92%</p>
               </div>
               <p className="dash-sensor-name mb-1 flex-grow-1">
                 Eficiência do Contator
@@ -37,8 +37,8 @@ export default function Dashboard() {
           <div className="col-6 col-md-3 d-flex">
             <div className="card d-flex align-items-center mb-2 text-center w-100">
               <div className="d-flex flex-row justify-content-between mt-1">
-                <FiActivity className="dash-sensor-icon mr-2" />
-                <p className="dash-sensor-data mb-2">86%</p>
+                <FiTrendingUp className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data ml-1 mb-2">86%</p>
               </div>
               <p className="dash-sensor-name mb-1 flex-grow-1">
                 Eficiencia do Reator
@@ -48,11 +48,11 @@ export default function Dashboard() {
           <div className="col-6 col-md-3 d-flex">
             <div className="card d-flex align-items-center mb-2 text-center w-100">
             <div className="d-flex flex-row justify-content-between mt-1">
-                <FiActivity className="dash-sensor-icon mr-2" />
-                <p className="dash-sensor-data mb-2">??</p>
+                <FiFilter className="dash-sensor-icon mr-2" />
+                <p className="dash-sensor-data ml-1 mb-2">??</p>
               </div>
               <p className="dash-sensor-name mb-1 flex-grow-1">
-                Concentração de CO2 Final
+                Concentração Final de CO2
               </p>
             </div>
           </div>
