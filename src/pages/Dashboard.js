@@ -7,7 +7,7 @@ export default function Dashboard() {
     <>
       <Navbar page="dashboard" />
       <div className="container py-4">
-        <div className="mb-2 d-flex flex-column flex-md-row justify-content-between">
+        <div className="d-flex flex-column flex-md-row justify-content-between mb-1">
           <h1>Informações em Tempo Real</h1>
           <h1>Estado do Sistema: Ativo</h1>
         </div>

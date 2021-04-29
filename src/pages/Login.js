@@ -49,7 +49,7 @@ export default function Login() {
                   />
                 </div>
                 <div className="col-12 mt-3 mb-2 text-center">
-                  <button type="submit" className="btn btn-block btn-primary">
+                  <button type="submit" className="btn btn-primary btn-block">
                     Entrar
                   </button>
                 </div>

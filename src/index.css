@@ -224,7 +224,8 @@ h3 {
 .card-login {
   padding: 0;
   margin-bottom: 3rem;
-  min-width: 300px;
+  min-width: 260px;
+  max-width: 360px;
 }
 
 .card-body {

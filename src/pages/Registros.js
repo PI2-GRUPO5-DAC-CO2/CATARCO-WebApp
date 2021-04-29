@@ -6,7 +6,11 @@ export default function Registros() {
     <>
       <Navbar page="registros" />
       <div className="container py-4">
-        <h1>Histórico de Registros</h1>
+        <div className="row mb-2">
+          <div className="col-12 col-sm">
+            <h1>Histórico de Registros</h1>
+          </div>
+        </div>
       </div>
     </>
   );
