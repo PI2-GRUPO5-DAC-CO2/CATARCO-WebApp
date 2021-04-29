@@ -50,7 +50,7 @@ export default function Navbar({ page }) {
                 <div
                   className="d-flex flex-row mb-drop-item"
                   type="button"
-                  onClick={() => null}
+                  onClick={() => history.push("/usuarios")}
                 >
                   <FiUsers className="drop-item-icon" />
                   <p className="drop-item-text">Gerenciar Usuários</p>

@@ -37,7 +37,7 @@ export default function Controle() {
             <h1 className="mb-1">Controladores</h1>
           </div>
           <div className="mb-2">
-            <div className="card card-table px-3">
+            <div className="card card-table">
               <table className="table mb-0">
                 <thead>
                   <tr>
@@ -148,7 +148,7 @@ export default function Controle() {
             <h1 className="mb-1">Sensores</h1>
           </div>
           <div className="mb-2">
-            <div className="card card-table px-3">
+            <div className="card card-table">
               <table className="table mb-0">
                 <thead>
                   <tr>

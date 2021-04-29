@@ -228,6 +228,10 @@ h3 {
   max-width: 360px;
 }
 
+.card-table {
+  padding: 0.3rem .75rem;
+}
+
 .card-body {
   padding: 1rem 1rem 0.75rem 1rem;
 }
@@ -251,6 +255,10 @@ h3 {
 
 .btn-danger {
   background-color: #f35050;
+}
+
+.btn-title {
+  font-size: .875rem;
 }
 
 /* Form */
