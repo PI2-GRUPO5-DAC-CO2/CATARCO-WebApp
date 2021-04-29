@@ -15,16 +15,21 @@ export default function Controle() {
           </div>
           <div className="form-row">
             <div className="col-12 col-sm-auto">
-            <button className="btn btn-primary btn-block mb-2 mr-2" onClick={() => null}>
-              Pausar sistema
-            </button>
+              <button
+                className="btn btn-primary btn-block mb-2 mr-2"
+                onClick={() => null}
+              >
+                Pausar sistema
+              </button>
             </div>
             <div className="col-12 col-sm-auto">
-            <button className="btn btn-danger btn-block mb-2 mr-2" onClick={() => null}>
-              Desligar sistema
-            </button>
+              <button
+                className="btn btn-danger btn-block mb-2 mr-2"
+                onClick={() => null}
+              >
+                Desligar sistema
+              </button>
             </div>
-            
           </div>
         </div>
         <div className="mb-4" id="controllers">

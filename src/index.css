@@ -65,6 +65,60 @@ body {
   text-decoration: none;
 }
 
+.header-user-box {
+  background-color: #485b85;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-user-icon {
+  height: 36px;
+  width: auto;
+  margin: auto 0.6rem;
+}
+
+.header-user-name {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  margin-right: 0.6rem;
+}
+
+.header-user-role {
+  color: #fff;
+  font-size: 0.925rem;
+  margin-bottom: 0;
+  margin-right: 0.6rem;
+}
+
+.header-user-drop {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  padding: 0.5rem;
+  left: auto;
+}
+
+.drop-item-icon {
+  height: 1.125rem;
+  width: auto;
+  margin-right: 0.8rem;
+}
+
+.drop-item-text {
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.mb-drop-item {
+  margin-bottom: 0.7rem;
+}
+
 /* Navbar */
 
 .navbar {
@@ -89,10 +143,12 @@ body {
 
 .nav-link:hover {
   color: #49629a;
+  font-weight: 500;
 }
 
 .nav-link-active {
   color: #2e3f66;
+  font-weight: 500;
 }
 
 /* Text */
@@ -219,5 +275,12 @@ h2 {
 
   .dash-sensor-name {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-user-drop {
+    right: 14px;
+    left: auto;
   }
 }
