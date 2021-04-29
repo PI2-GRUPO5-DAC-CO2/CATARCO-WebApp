@@ -47,7 +47,7 @@ export default function Dashboard() {
           </div>
           <div className="col-6 col-md-3 d-flex">
             <div className="card d-flex align-items-center mb-2 text-center w-100">
-            <div className="d-flex flex-row justify-content-between mt-1">
+              <div className="d-flex flex-row justify-content-between mt-1">
                 <FiFilter className="dash-sensor-icon mr-2" />
                 <p className="dash-sensor-data ml-1 mb-2">??</p>
               </div>

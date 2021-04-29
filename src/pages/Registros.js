@@ -4,9 +4,9 @@ import Navbar from "../components/Navbar";
 export default function Registros() {
   return (
     <>
-      <Navbar page="registros"/>
+      <Navbar page="registros" />
       <div className="container py-4">
-        <h1>Registros</h1>
+        <h1>Histórico de Registros</h1>
       </div>
     </>
   );

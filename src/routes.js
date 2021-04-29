@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Controle from "./pages/Controle";
 import Registros from "./pages/Registros";
+import Login from "./pages/Login";
 
 export default function Routes() {
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function Routes() {
         <Route path="/" exact component={Dashboard} />
         <Route path="/controle" exact component={Controle} />
         <Route path="/registros" exact component={Registros} />
+        <Route path="/login" exact component={Login} />
       </Switch>
     </BrowserRouter>
   );

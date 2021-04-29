@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FiUsers, FiLogOut } from "react-icons/fi";
 
 import userIcon from "../assets/images/user-icon.png";
 
 export default function Navbar({ page }) {
+  const history = useHistory();
+
   const [userDropdown, setUserDropdown] = useState(false);
+
+  function handleLogout() {
+    history.push("/login");
+  }
 
   const checkActiveLink = (linkPage) =>
     linkPage === page ? "nav-link-active" : "";
@@ -52,7 +58,7 @@ export default function Navbar({ page }) {
                 <div
                   className="d-flex flex-row"
                   type="button"
-                  onClick={() => null}
+                  onClick={() => handleLogout()}
                 >
                   <FiLogOut className="drop-item-icon" />
                   <p className="drop-item-text">Sair</p>

@@ -22,16 +22,27 @@ body {
   background-color: #fafafa;
 }
 
-/* Pages */
-
-.bg-login {
-  background-color: #6d9ddd;
+/* Login */
+.login-upper {
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 1600px) {
-  .container {
-    max-width: 80%;
-  }
+.login-title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #2e3f66;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* Background */
+
+.bg-login {
+  background-color: #3388ee;
 }
 
 /* Header */
@@ -165,7 +176,13 @@ h1 {
 
 h2 {
   color: #2e3f66;
-  font-size: 25rem;
+  font-size: 1.25rem;
+  font-width: 500;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.125rem;
   font-width: 500;
 }
 
@@ -204,9 +221,19 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+.card-login {
+  padding: 0;
+  margin-bottom: 3rem;
+  min-width: 300px;
+}
+
+.card-body {
+  padding: 1rem 1rem 0.75rem 1rem;
+}
+
 /* Buttons */
 
-.btn {
+.btn-lg {
   border: none;
   font-weight: 500;
   font-size: 1.125rem;
@@ -225,6 +252,11 @@ h2 {
   background-color: #f35050;
 }
 
+/* Form */
+label {
+  font-size: 0.875rem;
+}
+
 /* Table */
 .table {
   font-size: 1rem;
@@ -241,6 +273,12 @@ h2 {
 }
 .w-20 {
   width: 20% !important;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 767px) {

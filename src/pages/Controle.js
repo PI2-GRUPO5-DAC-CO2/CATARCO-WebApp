@@ -16,7 +16,7 @@ export default function Controle() {
           <div className="form-row">
             <div className="col-12 col-sm-auto">
               <button
-                className="btn btn-primary btn-block mb-2 mr-2"
+                className="btn btn-lg btn-primary btn-block mb-2 mr-2"
                 onClick={() => null}
               >
                 Pausar sistema
@@ -24,7 +24,7 @@ export default function Controle() {
             </div>
             <div className="col-12 col-sm-auto">
               <button
-                className="btn btn-danger btn-block mb-2 mr-2"
+                className="btn btn-lg btn-danger btn-block mb-2 mr-2"
                 onClick={() => null}
               >
                 Desligar sistema
