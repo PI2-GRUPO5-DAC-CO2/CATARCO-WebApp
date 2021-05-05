@@ -7,7 +7,8 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleLogin() {
+  function handleLogin(e) {
+    e.preventDefault();
     console.log({ username: username, password: password });
     history.push("/");
   }
@@ -24,10 +25,10 @@ export default function Login() {
               <h3 className="text-center mb-3">Login</h3>
               <form
                 className="form-row text-left"
-                onSubmit={() => handleLogin()}
+                onSubmit={handleLogin}
               >
                 <div className="col-12 mb-2">
-                  <label for="user" className="form-label">
+                  <label htmlFor="user" className="form-label">
                     Usuário
                   </label>
                   <input
@@ -38,7 +39,7 @@ export default function Login() {
                   />
                 </div>
                 <div className="col-12 mb-2">
-                  <label for="user" className="form-label">
+                  <label htmlFor="password" className="form-label">
                     Senha
                   </label>
                   <input

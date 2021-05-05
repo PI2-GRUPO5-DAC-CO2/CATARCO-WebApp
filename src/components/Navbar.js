@@ -80,12 +80,12 @@ export default function Navbar({ page }) {
             >
               Controle
             </Link>
-            <Link
+            {/*<Link
               to="/registros"
               className={`nav-link ${checkActiveLink("registros")}`}
             >
               Registros
-            </Link>
+            </Link>*/}
           </div>
         </div>
       </nav>
