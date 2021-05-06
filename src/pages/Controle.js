@@ -3,11 +3,11 @@ import api from "../services/api";
 import Navbar from "../components/Navbar";
 
 export default function Controle() {
-  const [sensorsData, setSensorsData] = useState([]);
+  // const [sensorsData, setSensorsData] = useState([]);
   const [system, setSystem] = useState(true);
   const [exaustor, setExaustor] = useState(true);
 
-  const sensorsDataStatus = sensorsData.length === 0;
+  // const sensorsDataStatus = sensorsData.length === 0;
 
   useEffect(() => {
     localStorage.setItem("system", system);
@@ -21,7 +21,7 @@ export default function Controle() {
     await api.get("sensors")
       .then((response) => {
         console.log(response.data);
-        setSensorsData(response.data);
+        // setSensorsData(response.data);
       })
       .catch((error) => {
         console.log(error);
