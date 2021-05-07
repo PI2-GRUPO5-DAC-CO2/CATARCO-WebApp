@@ -191,6 +191,20 @@ h3 {
   font-weight: 400;
 }
 
+.log-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.table-small td, .table-small th {
+  padding: .5em;
+  font-size: 0.825rem !important;
+}
+
 /* Dashboard */
 
 .dash-sensor-icon {
