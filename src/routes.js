@@ -40,8 +40,8 @@ export default function Routes() {
   async function getSensorsData() {
     await getSensorsDataFromAPI
       .then((response) => {
-        // console.log(response.data);
         setSensorsData(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);

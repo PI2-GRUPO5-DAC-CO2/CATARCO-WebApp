@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Navbar from "../components/Navbar";
 
 export default function Controle({ actuatorData, sensorsData }) {
@@ -8,9 +8,15 @@ export default function Controle({ actuatorData, sensorsData }) {
     fanStatus,
     setFanStatus
   } = actuatorData;
+  const [sensors, setSensors] = useState(sensorsData)
 
   const isSensorsEmpty = sensorsData.length === 0;
   console.log(isSensorsEmpty)
+
+  useEffect(() => {
+    const interval = systemStatus ? setInterval(() => setSensors(sensorsData), 4000) : null;
+    return () => clearInterval(interval);
+  }, [sensorsData, systemStatus, setSensors])
 
   return (
     <>
@@ -92,13 +98,13 @@ export default function Controle({ actuatorData, sensorsData }) {
                                 <tr>
                                   <td>CO2</td>
                                   <td>Meio Externo</td>
-                                  <td>32 ppm</td>
+                                  <td>384.4 ppm</td>
                                   <td>Ativo</td>
                                 </tr>
                                 <tr>
                                   <td>Umidade</td>
                                   <td>Meio Externo</td>
-                                  <td>22%</td>
+                                  <td>{sensors[2].value}%</td>
                                   <td>Ativo</td>
                                 </tr>
                                 <tr>
@@ -116,13 +122,13 @@ export default function Controle({ actuatorData, sensorsData }) {
                                 <tr>
                                   <td>Rotação</td>
                                   <td>Motor 1 - Ventilador</td>
-                                  <td>4000 RPM</td>
+                                  <td>{sensors[5].value} RPM</td>
                                   <td>Ativo</td>
                                 </tr>
                                 <tr>
                                   <td>Rotação</td>
                                   <td>Motor 2 - Ventilador</td>
-                                  <td>4000 RPM</td>
+                                  <td>{sensors[6].value} RPM</td>
                                   <td>Ativo</td>
                                 </tr>
                                 <tr>
@@ -134,19 +140,19 @@ export default function Controle({ actuatorData, sensorsData }) {
                                 <tr>
                                   <td>Pressão</td>
                                   <td>Reator</td>
-                                  <td>18.2 Pa</td>
+                                  <td>{sensors[8].value} Pa</td>
                                   <td>Ativo</td>
                                 </tr>
                                 <tr>
                                   <td>Temperatura</td>
                                   <td>Reator</td>
-                                  <td>28 ºC</td>
+                                  <td>{sensors[9].value} ºC</td>
                                   <td>Ativo</td>
                                 </tr>
                                 <tr>
                                   <td>Temperatura</td>
                                   <td>Reservatório NaOH</td>
-                                  <td>29 ºC</td>
+                                  <td>{sensors[10].value} ºC</td>
                                   <td>Ativo</td>
                                 </tr>
                                 <tr>
