@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
+import { getSensorsDataFromAPI } from "./services/api";
 import Dashboard from "./pages/Dashboard";
 import Controle from "./pages/Controle";
 import Registros from "./pages/Registros";
@@ -8,6 +9,10 @@ import Usuarios from "./pages/Usuarios";
 import Login from "./pages/Login";
 
 export default function Routes() {
+  const [systemStatus, setSystemStatus] = useState(true);
+  const [fanStatus, setFanStatus] = useState(true);
+  const [sensorsData, setSensorsData] = useState([]);
+
   useEffect(() => {
     function handleResize() {
       let vh = window.innerHeight * 0.01;
@@ -20,11 +25,34 @@ export default function Routes() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const interval = systemStatus ? setInterval(() => getSensorsData(), 4000) : null;
+    return () => clearInterval(interval);
+  }, [systemStatus])
+
+  const actuatorData = {
+    systemStatus: systemStatus,
+    setSystemStatus: setSystemStatus,
+    fanStatus: fanStatus,
+    setFanStatus: setFanStatus
+  }
+
+  async function getSensorsData() {
+    await getSensorsDataFromAPI
+      .then((response) => {
+        // console.log(response.data);
+        setSensorsData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Dashboard} />
-        <Route path="/controle" exact component={Controle} />
+        <Route path="/" exact component={() => <Dashboard />} />
+        <Route path="/controle" exact component={() => <Controle actuatorData={{...actuatorData}} sensorsData={sensorsData}/>} />
         <Route path="/registros" exact component={Registros} />
         <Route path="/usuarios" exact component={Usuarios} />
         <Route path="/login" exact component={Login} />
