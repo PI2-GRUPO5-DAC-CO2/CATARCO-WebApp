@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
+import logo from "../assets/images/logo-branca-catarco.png";
+
 export default function Login() {
   const history = useHistory();
 
@@ -19,7 +21,7 @@ export default function Login() {
         <div className="col-12">
           <div className="card card-login">
             <div className="login-title">
-              <p className="m-2">CATARCO</p>
+              <img className="m-2" src={logo} height={36} alt="CATARCO Logo" />
             </div>
             <div className="card-body">
               <h3 className="text-center mb-3">Login</h3>

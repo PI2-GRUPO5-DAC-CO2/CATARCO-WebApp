@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { FiUsers, FiLogOut } from "react-icons/fi";
 
+import logo from "../assets/images/logo-branca-catarco.png";
 import userIcon from "../assets/images/user-icon.png";
 
 export default function Navbar({ page }) {
@@ -21,7 +22,7 @@ export default function Navbar({ page }) {
       <nav className="header">
         <div className="container nav-container">
           <Link to="/" className="header-brand">
-            CATARCO
+            <img src={logo} height={36} alt="CATARCO Logo" />
           </Link>
           <div className="h-100">
             <div

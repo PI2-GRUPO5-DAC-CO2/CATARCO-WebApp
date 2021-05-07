@@ -51,8 +51,12 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={() => <Dashboard />} />
-        <Route path="/controle" exact component={() => <Controle actuatorData={{...actuatorData}} sensorsData={sensorsData}/>} />
+        <Route path="/" exact component={
+          () => <Dashboard actuatorData={{ ...actuatorData }} />
+        } />
+        <Route path="/controle" exact component={
+          () => <Controle actuatorData={{ ...actuatorData }} sensorsData={sensorsData} />
+        } />
         <Route path="/registros" exact component={Registros} />
         <Route path="/usuarios" exact component={Usuarios} />
         <Route path="/login" exact component={Login} />
