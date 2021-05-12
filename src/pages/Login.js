@@ -11,8 +11,8 @@ export default function Login() {
 
   function handleLogin(e) {
     e.preventDefault();
-    console.log({ username: username, password: password });
-    history.push("/");
+    if (username === "admin" && password === "admin123")
+      history.push("/")
   }
 
   return (

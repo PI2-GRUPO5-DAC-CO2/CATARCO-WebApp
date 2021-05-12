@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from "react";
+import { updateActuatorsData } from "../services/api";
 import Navbar from "../components/Navbar";
 
-export default function Controle({ actuatorData, sensorsData }) {
-  const {
-    systemStatus,
-    setSystemStatus,
-    fanStatus,
-    setFanStatus
-  } = actuatorData;
+export default function Controle({ apiData, systemManager }) {
+  const { actuatorsData, sensorsData } = apiData;
+  const { systemStatus, setSystemStatus } = systemManager;
   const [sensors, setSensors] = useState(sensorsData)
+  const [actuators, setActuators] = useState(actuatorsData)
 
   const isSensorsEmpty = sensorsData.length === 0;
-  console.log(isSensorsEmpty)
 
   useEffect(() => {
-    const interval = systemStatus ? setInterval(() => setSensors(sensorsData), 4000) : null;
+    const interval = systemStatus ? setInterval(() => updateStatus(), 2500) : null;
     return () => clearInterval(interval);
-  }, [sensorsData, systemStatus, setSensors])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  function updateStatus() {
+    setSensors(sensorsData);
+    setActuators(actuatorsData);
+  }
+
+  async function handleFanStatus(value) {
+    await updateActuatorsData(2, value)
+      .catch(e => console.log(e))
+  }
 
   return (
     <>
@@ -58,14 +66,14 @@ export default function Controle({ actuatorData, sensorsData }) {
                       <tbody>
                         <tr>
                           <td>Exaustor</td>
-                          <td>{fanStatus ? "Ativo" : "Desligado"}</td>
+                          <td>{actuators[1]?.value ? "Ativo" : "Desligado"}</td>
                           <td>
                             <div className="form-check">
                               <input
                                 type="checkbox"
                                 className="form-check-input"
-                                onChange={() => setFanStatus(!fanStatus)}
-                                checked={fanStatus}
+                                onChange={() => handleFanStatus(!actuators[1]?.value)}
+                                checked={actuators[1]?.value}
                               />
                             </div>
                           </td>
@@ -95,82 +103,82 @@ export default function Controle({ actuatorData, sensorsData }) {
                           !isSensorsEmpty
                             ? (
                               <>
-                                <tr>
+                                <tr id={1}>
                                   <td>CO2</td>
                                   <td>Meio Externo</td>
-                                  <td>384.4 ppm</td>
+                                  <td>{sensors[0].value.toFixed(1)} ppm</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={2}>
                                   <td>Umidade</td>
                                   <td>Meio Externo</td>
-                                  <td>{sensors[2].value}%</td>
+                                  <td>{sensors[1].value}%</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={3}>
                                   <td>Nivel Alto</td>
                                   <td>Reservatório Na2CO3</td>
-                                  <td>Negativo</td>
+                                  <td>{sensors[2].value ? "Positivo" : "Negativo"}</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={4}>
                                   <td>Nivel Baixo</td>
                                   <td>Reservatório Na2CO3</td>
-                                  <td>Positivo</td>
+                                  <td>{sensors[3].value ? "Positivo" : "Negativo"}</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={5}>
                                   <td>Rotação</td>
                                   <td>Motor 1 - Ventilador</td>
+                                  <td>{sensors[4].value} RPM</td>
+                                  <td>Ativo</td>
+                                </tr>
+                                <tr id={6}>
+                                  <td>Rotação</td>
+                                  <td>Motor 2 - Ventilador</td>
                                   <td>{sensors[5].value} RPM</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
-                                  <td>Rotação</td>
-                                  <td>Motor 2 - Ventilador</td>
-                                  <td>{sensors[6].value} RPM</td>
-                                  <td>Ativo</td>
-                                </tr>
-                                <tr>
+                                <tr id={7}>
                                   <td>Nivel Baixo</td>
                                   <td>Reservatório Ca(OH)2</td>
-                                  <td>Positivo</td>
+                                  <td>{sensors[6].value ? "Positivo" : "Negativo"}</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={8}>
                                   <td>Pressão</td>
                                   <td>Reator</td>
-                                  <td>{sensors[8].value} Pa</td>
+                                  <td>{sensors[7].value.toFixed(1)} Pa</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={9}>
                                   <td>Temperatura</td>
                                   <td>Reator</td>
-                                  <td>{sensors[9].value} ºC</td>
+                                  <td>{sensors[8].value.toFixed(1)} ºC</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={10}>
                                   <td>Temperatura</td>
                                   <td>Reservatório NaOH</td>
-                                  <td>{sensors[10].value} ºC</td>
+                                  <td>{sensors[9].value.toFixed(1)} ºC</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={11}>
                                   <td>Nivel Alto</td>
                                   <td>Reservatório NaOH</td>
-                                  <td>Negativo</td>
+                                  <td>{sensors[10].value ? "Positivo" : "Negativo"}</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={12}>
                                   <td>Nivel Baixo</td>
                                   <td>Reservatório NaOH</td>
-                                  <td>Positivo</td>
+                                  <td>{sensors[11].value ? "Positivo" : "Negativo"}</td>
                                   <td>Ativo</td>
                                 </tr>
-                                <tr>
+                                <tr id={13}>
                                   <td>Nivel Alto</td>
                                   <td>Reservatório CaCO3</td>
-                                  <td>Negativo</td>
+                                  <td>{sensors[12].value ? "Positivo" : "Negativo"}</td>
                                   <td>Ativo</td>
                                 </tr>
                               </>

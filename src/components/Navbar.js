@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { FiUsers, FiLogOut } from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
 
 import logo from "../assets/images/logo-branca-catarco.png";
 import userIcon from "../assets/images/user-icon.png";
@@ -36,7 +36,7 @@ export default function Navbar({ page }) {
                 alt="User Icon"
               />
               <div className="d-none d-sm-block">
-                <p className="header-user-name">Igor Aragão Gomes</p>
+                <p className="header-user-name">admin</p>
                 <p className="header-user-role">Administrador</p>
               </div>
             </div>
@@ -44,18 +44,18 @@ export default function Navbar({ page }) {
               <div className="dropdown-menu header-user-drop pr-4">
                 <div className="d-block d-sm-none mb-3">
                   <p className="header-user-name text-dark">
-                    Igor Aragão Gomes
+                    admin
                   </p>
                   <p className="header-user-role text-dark">Administrador</p>
                 </div>
-                <div
+                {/*<div
                   className="d-flex flex-row mb-drop-item"
                   type="button"
                   onClick={() => history.push("/usuarios")}
                 >
                   <FiUsers className="drop-item-icon" />
                   <p className="drop-item-text">Gerenciar Usuários</p>
-                </div>
+                </div>*/}
                 <div
                   className="d-flex flex-row"
                   type="button"
